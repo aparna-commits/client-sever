@@ -1,0 +1,69 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    class SignUp extends React.Component{
+        //react.component has props, state, refs.......
+        //run this empty class--> error? 
+        //warning >render method not found
+        //error > instance.render is not a function
+        //because react people create object of the class n call the render method
+        // var instance=new SignUp();
+        //instance.render();
+        //undefined()
+
+        functionSignUp(){
+
+        }
+render(){
+    //now run this empty
+    //return is missing
+    //render methid also having the current object as react calls it byitself
+    return <div>
+        SignUp
+        <p>
+            <b>Name:</b><input/>
+            </p>
+            <p>
+            <b>User Id:</b><input />
+            </p>
+            <p>
+            <b>Password:</b><input type="password"/>
+            </p>
+            <p>
+            <b>Gender:</b><input type="radio" name="gender"/> MAle
+            <input type="radio" name="gender"/> Female
+            </p>
+            <p>
+            <b>Hobbies:</b><input type="checkbox" /> MAle
+            <input type="checkbox" /> Female
+            </p>
+            <p>
+            <b>Country:</b><select>
+                <option>India</option>
+                <option>US</option>
+                <option>India</option>
+                </select>
+            </p>
+            <p>
+                <b>Address:</b><texarea></texarea>
+                </p>
+                <p>
+                    <button onClick={this.functionSignUp.bind(this)}>Signup</button>
+                    
+                    </p>
+        </div>
+        // bind return me a fun
+    //no error
+    //at the time of loading if we want to perform some operation on current object(ex state) then have to use constructor
+// now go to requirement
+
+}
+
+ 
+    }
+    ReactDOM.render(<SignUp />, document.getElementById('root'));
+</script>
